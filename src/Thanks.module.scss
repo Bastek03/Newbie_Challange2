@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+.App {
+    color: $White;
+    background-color: $VeryDarkBlue;
+    width: 25%;
+    height: 400px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.showRate {
+    background-color: $DarkBlue;
+    color: orange;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+.contentTxt {
+    color: $LightGrey;
+    margin-top: 20px;
+}

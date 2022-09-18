@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+body {
+    background-color: black;
+    p {
+        font-size: 15px;
+    }
+}
+
+.App {
+    color: $White;
+    background-color: $VeryDarkBlue;
+    width: 25%;
+    height: 400px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: left;
+
+    h1 {
+        margin-top: 25px;
+    }
+
+    p {
+        margin: 20px 0 25px;
+        color: $LightGrey;
+    }
+}
+
+.circlesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+        display: none;
+    }
+
+    input:checked + label {
+        background-color: $LightGrey;
+        color: $White;
+    }
+    
+}
+
+
+@mixin circle {
+    width: 50px;
+    height: 50px;
+    background-color: $DarkBlue;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $LightGrey;
+    cursor: pointer;
+}
+
+.circle {
+   @include circle;
+
+   &:hover{
+        background-color: orange;
+        color: $White;
+   }
+}
+
+.circleStatic {
+    @include circle;
+    cursor: default;
+}
+
+
+.submitButton {
+    background-color: orange;
+    color: $White;
+    border-radius: 40px;
+    height: 40px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: $White;
+        color: orange;
+        cursor: pointer;
+    }
+}
